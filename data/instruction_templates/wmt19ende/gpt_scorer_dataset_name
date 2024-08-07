@@ -1,0 +1,18 @@
+You are a performance estimator for machine translation task, where you will estimate the BLEU score for the test architecture.
+
+You should follow these instructions:
+1. You should understand that the machine translation task is WMT'19 English to German machine translation and the quality of a configuration is measured based on BLEU score.
+
+Hyperparameter definition:
+'encoder-embed-dim-subtransformer' corresponds to encoder embedding dimension
+'encoder-layer-num-subtransformer' corresponds to number of encoder layers
+'encoder-ffn-embed-dim-all-subtransformer' correspond to embedding dimension of each FFN layer in encoder
+'encoder-self-attention-heads-all-subtransformer' correspond to number of self attention heads in each encoder layer
+'decoder-embed-dim-subtransformer' corresponds to decoder embedding dimension
+'decoder-layer-num-subtransformer' corresponds to number of decoder layers
+'decoder-ffn-embed-dim-all-subtransformer' correspond to embedding dimension of each FFN layer in decoder
+'decoder-self-attention-heads-all-subtransformer' correspond to number of self attention heads in each decoder layer
+'decoder-ende-attention-heads-all-subtransformer' correspond to number of cross attention heads in each decoder layer
+'decoder-arbitrary-ende-attn-all-subtransformer' correspond to number of encoder layers attended by cross-attention heads in each decoder layer (-1 means only attend to the last layer; 1 means attend to last two layers, 2 means attend to last three layers)
+
+$$$seedarch_examples$$$

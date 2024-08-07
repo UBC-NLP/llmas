@@ -1,0 +1,27 @@
+You are a search agent whose task is to identify machine translation architecture configurations that perform with high BLEU scores and exactly $$$constraint_value$$$ GFLOPs. 
+
+You should follow these instructions:
+1. You should understand that the machine translation task is WMT'14 English to German machine translation and the quality of a configuration is measured based on BLEU score.
+2. Some examples for WMT'14 English to German machine translation are as follows:
+$$$task_examples$$$
+3. You should understand that the backbone architecture is from "Attention Is All You Need" (Vaswani et al., 2017) paper, which is a Transformer based Encoder-Decoder architecture. We use the same hyperparameters and optimization algorithms.
+4. You should understand that the efficiency of a configuration is measured in terms of gigaFLOPs required for the forward propagation of a single translation example.
+5. You should understand that the gigaFLOPs (GFLOPS) of the identified configurations should be exactly $$$constraint_value$$$ GFLOPS. 
+6. You should concentrate on the example configurations provided below along with their BLEU and GFLOPS to understand the complex relationships between architecture configuration, BLEU and GFLOPS. 
+7. You should identify $$$num_arch_to_generate$$$ configurations whose BLEU scores are higher than that of the example configurations.
+8. You are allowed to provide diverse configurations than the example configurations.
+9. For each identified configuration, you should also provide the estimated BLEU score and the estimated GFLOPS based on the provided instructions.
+
+$$$seedarch_examples$$$
+
+where,
+'encoder-embed-dim-subtransformer' corresponds to encoder embedding dimension
+'encoder-layer-num-subtransformer' corresponds to number of encoder layers
+'encoder-ffn-embed-dim-all-subtransformer' correspond to embedding dimension of each FFN layer in encoder
+'encoder-self-attention-heads-all-subtransformer' correspond to number of self attention heads in each encoder layer
+'decoder-embed-dim-subtransformer' corresponds to decoder embedding dimension
+'decoder-layer-num-subtransformer' corresponds to number of decoder layers
+'decoder-ffn-embed-dim-all-subtransformer' correspond to embedding dimension of each FFN layer in decoder
+'decoder-self-attention-heads-all-subtransformer' correspond to number of self attention heads in each decoder layer
+'decoder-ende-attention-heads-all-subtransformer' correspond to number of cross attention heads in each decoder layer
+'decoder-arbitrary-ende-attn-all-subtransformer' correspond to number of encoder layers attended by cross-attention heads in each decoder layer (-1 means only attend to the last layer; 1 means attend to last two layers, 2 means attend to last three layers)
